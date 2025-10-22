@@ -1,4 +1,4 @@
-// src/screens/cart/CartScreen.tsx
+
 import React from 'react';
 import { StyleSheet, View, FlatList, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -59,7 +59,7 @@ const CartScreen = () => {
           ItemSeparatorComponent={() => <View style={{ height: vs(10) }} />}
           renderItem={({ item }) => (
             <View style={styles.row}>
-              {/* small delete button at top-right */}
+              
               <TouchableOpacity
                 onPress={() => dispatch(removeFromCart(item.product.id))}
                 style={styles.deleteBtn}
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
 
   row: {
-    position: 'relative', // ⬅️ needed for absolute delete button
+    position: 'relative', 
     flexDirection: 'row',
     gap: s(10),
     padding: s(10),
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     borderRadius: s(12),
   },
 
-  // small round delete chip in top-right corner
+ 
   deleteBtn: {
     position: 'absolute',
     top: s(8),
