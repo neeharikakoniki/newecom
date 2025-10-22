@@ -10,6 +10,7 @@ import AppText from "../../components/texts/AppText";
 import AppButton from "../../components/buttons/AppButton";
 import { AppColors } from "../../styles/colors";
 import { useNavigation } from "@react-navigation/native";
+import MainAppBottomTabs from "../../navigation/MainAppBottomTabs";
 
 const SignInScreen = () => {
   const [email, setEmail] = useState("");
@@ -35,7 +36,8 @@ const SignInScreen = () => {
         secureTextEntry
       />
       
-      <AppButton title="Login" />
+      <AppButton title="Login"
+      onPress={() => navigation.navigate("MainAppBottomTabs")} />
       <AppButton
         title="Sign Up"
         style={styles.registerButton}
