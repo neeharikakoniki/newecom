@@ -1,3 +1,4 @@
+import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/home/HomeScreen";
 import CartScreen from "../screens/cart/CartScreen";
@@ -6,6 +7,10 @@ import { AppColors } from "../styles/colors";
 import { s, vs } from "react-native-size-matters";
 import { Ionicons } from "@expo/vector-icons";
 import { IS_Android } from "../constants/constants";
+
+
+import { useAppSelector } from "../store";
+import { selectTotalItems } from "../store/slices/cartSlice";
 
 export type TabsParamList = {
   Home: undefined;
@@ -16,11 +21,14 @@ export type TabsParamList = {
 const Tab = createBottomTabNavigator<TabsParamList>();
 
 export default function MainAppBottomTabs() {
+  const total = useAppSelector(selectTotalItems);
+  const badge = total > 99 ? "99+" : total > 0 ? total : undefined;
+
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: AppColors?.primary ?? '#2C5E1A',
+        tabBarActiveTintColor: AppColors?.primary ?? "#2C5E1A",
         tabBarLabelStyle: { marginTop: vs(4), fontSize: s(12) },
         tabBarStyle: IS_Android ? { height: vs(50) } : undefined,
       }}
@@ -33,14 +41,17 @@ export default function MainAppBottomTabs() {
           tabBarIcon: ({ color, size }) => <Ionicons name="home" size={size} color={color} />,
         }}
       />
+
       <Tab.Screen
         name="Cart"
         component={CartScreen}
         options={{
           title: "Cart",
           tabBarIcon: ({ color, size }) => <Ionicons name="cart" size={size} color={color} />,
+          tabBarBadge: badge,
         }}
       />
+
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
