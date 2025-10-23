@@ -1,44 +1,11 @@
 {
-  "appName": "Shopverse",
-  "auth": {
-    "email": "Correo",
-    "password": "Contraseña",
-    "confirmPassword": "Confirmar contraseña",
-    "userName": "Nombre de usuario",
-    "login": "Iniciar sesión",
-    "signUp": "Registrarse",
-    "goToSignIn": "Ir a Iniciar sesión",
-    "createAccount": "Crear cuenta",
-    "creating": "Creando...",
-    "signingIn": "Ingresando..."
-  },
-  "home": {
-    "startShopping": "Empezar a comprar",
-    "loading": "Cargando productos...",
-    "retry": "Reintentar"
-  },
-  "cart": {
-    "title": "Carrito",
-    "empty": "Tu carrito está vacío.",
-    "subtotal": "Subtotal",
-    "clear": "Vaciar carrito"
-  },
-  "profile": {
-    "title": "Perfil",
-    "notSignedIn": "No has iniciado sesión.",
-    "signOut": "Cerrar sesión",
-    "name": "Nombre",
-    "email": "Correo",
-    "userId": "ID de usuario",
-    "language": "Idioma",
-    "english": "Inglés",
-    "spanish": "Español"
-  },
-  "toasts": {
-    "signedIn": "Inicio de sesión exitoso",
-    "accountCreated": "¡Cuenta creada! Por favor inicia sesión.",
-    "invalidCreds": "Correo o contraseña inválidos",
-    "signInFailed": "Fallo al iniciar sesión",
-    "signUpFailed": "Fallo al registrarse"
-  }
+  "welcome": "Bienvenido",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "signIn": "Iniciar sesión",
+  "signUp": "Registrarse",
+  "logout": "Cerrar sesión",
+  "profile": "Perfil",
+  "language": "Idioma",
+  "changeLanguage": "Cambiar idioma"
 }

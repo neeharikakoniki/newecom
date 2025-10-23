@@ -17,6 +17,7 @@ import { Product } from "../../store/slices/cartSlice";
 import { useAppDispatch } from "../../store";
 import { addToCart } from "../../store/slices/cartSlice";
 import { AppColors } from "../../styles/colors";
+import { useTranslation } from "react-i18next";
 
 const API = "https://dummyjson.com/products?limit=50";
 
@@ -27,6 +28,7 @@ const HomeScreen = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState<string>("");
+  const { t } = useTranslation();
 
 
   const fetchProducts = useCallback(async () => {

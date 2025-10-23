@@ -1,47 +1,11 @@
 {
-  "appName": "Shopverse",
-  "auth": {
-    "email": "Email",
-    "password": "Password",
-    "confirmPassword": "Confirm Password",
-    "userName": "User Name",
-    "login": "Login",
-    "signUp": "Sign Up",
-    "goToSignIn": "Go To Sign In",
-    "createAccount": "Create New Account",
-    "creating": "Creating...",
-    "signingIn": "Signing in..."
-  },
-  "home": {
-    "startShopping": "Start Shopping",
-     "loading": "Loading products...",
-    "fetchError": "Failed to load products",
-    "retry": "Retry",
-    "addToCart": "Add to Cart",
-    "addedToCart": "{{title}} added to cart"
-  },
-  "cart": {
-    "title": "Cart",
-    "empty": "Your cart is empty.",
-    "subtotal": "Subtotal",
-    "clear": "Clear Cart"
-  },
-  "profile": {
-    "title": "Profile",
-    "notSignedIn": "You’re not signed in.",
-    "signOut": "Sign Out",
-    "name": "Name",
-    "email": "Email",
-    "userId": "User ID",
-    "language": "Language",
-    "english": "English",
-    "spanish": "Spanish"
-  },
-  "toasts": {
-    "signedIn": "Signed in successfully",
-    "accountCreated": "Account created! Please sign in.",
-    "invalidCreds": "Invalid email or password",
-    "signInFailed": "Sign in failed",
-    "signUpFailed": "Sign up failed"
-  }
+  "welcome": "Welcome",
+  "email": "Email",
+  "password": "Password",
+  "signIn": "Sign In",
+  "signUp": "Sign Up",
+  "logout": "Sign Out",
+  "profile": "Profile",
+  "language": "Language",
+  "changeLanguage": "Change Language"
 }
