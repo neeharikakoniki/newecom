@@ -25,7 +25,6 @@ const HomeScreen = () => {
       setErr(null);
       const res = await fetch(API);
       const json = await res.json();
-      // map to our Product type
       const products: Product[] = (json?.products ?? []).map((p: any) => ({
         id: p.id,
         title: p.title,

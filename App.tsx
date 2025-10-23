@@ -5,16 +5,19 @@ import FlashMessage from 'react-native-flash-message';
 import MainAppStack from './src/navigation/MainAppStack';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
-
+import AuthListener from './src/components/providers/AuthListener';
 export default function App() {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
         <NavigationContainer>
-          <MainAppStack />
+          <AuthListener>
+            <MainAppStack />
+          </AuthListener>
           <FlashMessage position="top" />
         </NavigationContainer>
       </SafeAreaProvider>
     </Provider>
   );
 }
+
