@@ -16,6 +16,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { showMessage } from "react-native-flash-message";
 import { signInWithEmail } from "../../services/auth";
 
+
 type SignInForm = {
   email: string;
   password: string;
@@ -42,7 +43,6 @@ const SignInScreen = () => {
   const onSubmit = async (values: SignInForm) => {
     try {
       await signInWithEmail({ email: values.email, password: values.password });
-      // AuthListener will switch UI to MainAppBottomTabs automatically.
       showMessage({ message: "Signed in successfully", type: "success" });
     } catch (e: any) {
       const msg =

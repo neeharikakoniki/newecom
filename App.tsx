@@ -6,6 +6,7 @@ import MainAppStack from './src/navigation/MainAppStack';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
 import AuthListener from './src/components/providers/AuthListener';
+import "./src/i18n";
 export default function App() {
   return (
     <Provider store={store}>
