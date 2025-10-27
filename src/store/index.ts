@@ -2,10 +2,12 @@ import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import cartReducer from "./slices/cartSlice";
 import authReducer from "./slices/authSlice";
+import networkReducer from "./slices/networkSlice";
 export const store = configureStore({
   reducer: {
     cart: cartReducer,
     auth: authReducer,
+    network: networkReducer,
   },
   middleware: (getDefault) =>
     getDefault({

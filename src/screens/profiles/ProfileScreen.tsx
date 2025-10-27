@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-import {
-  StyleSheet,
-  View,
-  Modal,
-  TouchableOpacity,
-} from 'react-native';
+import { StyleSheet, View, Modal, TouchableOpacity } from 'react-native';
 import { s, vs, ms } from 'react-native-size-matters';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
@@ -18,14 +13,14 @@ import { AppColors } from '../../styles/colors';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
-  { code: 'en', label: 'English'},
+  { code: 'en', label: 'English' },
   { code: 'es', label: 'Español' },
 ];
 
 const ProfileScreen = () => {
   const user = useAppSelector((s) => s.auth.user);
   const { t, i18n } = useTranslation();
-  const [showModal, setShowModal] = useState(false); 
+  const [showModal, setShowModal] = useState(false);
 
   const initials = user?.displayName
     ? user.displayName
@@ -57,6 +52,7 @@ const ProfileScreen = () => {
       <View style={styles.container}>
         {user ? (
           <>
+            {/* Profile Card */}
             <View style={styles.profileCard}>
               <View style={styles.avatarWrapper}>
                 <View style={styles.avatar}>
@@ -89,6 +85,7 @@ const ProfileScreen = () => {
               </View>
             </View>
 
+            {/* Buttons */}
             <AppButton
               title={t('logout')}
               onPress={signOutUser}
@@ -110,6 +107,7 @@ const ProfileScreen = () => {
         )}
       </View>
 
+      {/* Language Modal */}
       <Modal
         transparent
         visible={showModal}
@@ -128,9 +126,7 @@ const ProfileScreen = () => {
                 style={styles.languageOption}
                 onPress={() => handleLanguageSelect(lang.code)}
               >
-                <AppText style={styles.languageText}>
-                  {lang.label}
-                </AppText>
+                <AppText style={styles.languageText}>{lang.label}</AppText>
               </TouchableOpacity>
             ))}
 
