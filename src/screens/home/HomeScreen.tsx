@@ -18,6 +18,7 @@ import { useAppDispatch } from "../../store";
 import { addToCart } from "../../store/slices/cartSlice";
 import { AppColors } from "../../styles/colors";
 import { useTranslation } from "react-i18next";
+import { triggerCartNotification } from '../../utils/notifications';
 
 const API = "https://dummyjson.com/products?limit=50";
 
@@ -78,6 +79,7 @@ const HomeScreen = () => {
   const onAdd = (item: Product) => {
     dispatch(addToCart(item));
     showMessage({ message: `${item.title} added to cart`, type: "success" });
+    triggerCartNotification(item.title);
   };
 
 
