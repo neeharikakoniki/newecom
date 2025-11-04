@@ -12,7 +12,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 interface AppSaveViewProps {
   children: ReactNode;
-  style: ViewStyle;
+  style?: ViewStyle;
 }
 
 const AppSaveView: FC<AppSaveViewProps> = ({ children, style }) => {

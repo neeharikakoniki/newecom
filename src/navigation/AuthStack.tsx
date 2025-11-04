@@ -2,17 +2,18 @@ import { createStackNavigator } from "@react-navigation/stack";
 import SignInScreen from "../screens/auth/SignInScreen";
 import SignUpScreen from "../screens/auth/SignUpScreen";
 
-const Stack = createStackNavigator()
+export type AuthStackParamList = {
+  SignInScreen: undefined;
+  SignUpScreen: undefined;
+};
 
-export default function AuthStack () {
-    return (
-        <Stack.Navigator 
-            screenOptions={{
-                headerShown: false
-            }}
-        >
-            <Stack.Screen name="SignInScreen" component={SignInScreen}/>
-            <Stack.Screen name="SignUpScreen" component={SignUpScreen}/>
-        </Stack.Navigator>
-    )
+const Stack = createStackNavigator<AuthStackParamList>();
+
+export default function AuthStack() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="SignInScreen" component={SignInScreen} />
+      <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+    </Stack.Navigator>
+  );
 }

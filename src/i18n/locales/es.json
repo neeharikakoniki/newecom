@@ -1,0 +1,11 @@
+{
+  "welcome": "Bienvenido",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "signIn": "Iniciar sesión",
+  "signUp": "Registrarse",
+  "logout": "Cerrar sesión",
+  "profile": "Perfil",
+  "language": "Idioma",
+  "changeLanguage": "Cambiar idioma"
+}
